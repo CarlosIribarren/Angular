@@ -1,0 +1,64 @@
+<h1>Componentes Bootstrap con ditectivas Angular:</h1>
+
+<ul>
+
+  <li>
+
+    <!-- Bootstrap DropDown con ditectivas Angular:
+      {1}: dropdown : Añadir esta directiva con el elemento class="dropdown".
+      {2}: dropdownToggle : usar esta directiva en vez de class="dropdown-toggle" y data-toggle="dropdown" de Bootstrap.
+      {3}: *dropdownMenu : Añadir esta directiva con el elemento class="dropdown".
+      -->
+    <h4>Bootstrap DropDown con ditectivas Angular:</h4>
+    <div class="dropdown" dropdown> <!-- {1} -->
+      <button dropdownToggle class="btn btn-secondary" type="button" id="dropdownMenuButton"
+        aria-haspopup="true" aria-expanded="false"> <!-- {2} -->
+        Componente DropDown
+      </button>
+      <div *dropdownMenu class="dropdown-menu"> <!-- {3} -->
+        <li><a class="dropdown-item" href="#">Opcion 1</a></li>
+        <li><a class="dropdown-item" href="#">Opcion 2</a></li>
+        <li><a class="dropdown-item" href="#">Opcion 3</a></li>
+      </div>
+    </div>
+
+  </li>
+
+  <li>
+
+    <!-- Bootstrap Tooltip con ditectivas Angular
+      {1}: tooltip = Se utiliza esta directiva en vex de data-toggle="tooltip" title="titulo" -->
+    <h4>Bootstrap Tooltip con ditectivas Angular:</h4>
+    <button type="button" class="btn btn-primary" data-placement="top" tooltip="Mensaje tooltip"> <!-- {1} -->
+      Componente Tooltip
+    </button>
+
+  </li>
+
+  <li>
+
+    <!-- Boton que visualiza el Modal:
+      Se utiliza angular para asociar y responder al evento onClick()
+      Se define el boton con el metodo "abrirModal()" que esta asociado al evento onClick()
+      Se para como parametro la plantilla ng definida abajo  -->
+    <h4>Bootstrap Modal con ditectivas Angular:</h4>
+    <button type="button" class="btn btn-info" (click)="abrirModal(template)">Componente Modal</button>
+
+    <!-- Modal: Plantilla ng:
+      Se utiliza angular para definir la plantilla
+      Se utiliza angular para asociar y responder al evento onClick()-->
+    <ng-template #template>
+      <div class="modal-header">
+        <h4 class="modal-title pull-left">Titulo del Modal</h4>
+        <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Cuerpo del modal
+      </div>
+    </ng-template>
+
+  </li>
+
+</ul>
