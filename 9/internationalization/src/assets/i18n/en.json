@@ -1,0 +1,15 @@
+{
+
+  "PRUEBA1" : {
+    "TEXTO1":"TEXT 1 EN",
+    "TEXTO2":"TEXT 2 EN",
+    "IDIOMA":"ENGLISH"
+  },
+
+  "prueba2" : {
+    "es" : "Spanish",
+    "en" : "English",
+    "pt" : "Portuguese"
+  }
+
+}

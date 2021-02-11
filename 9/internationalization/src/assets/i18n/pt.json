@@ -1,0 +1,15 @@
+{
+
+  "PRUEBA1" : {
+    "TEXTO1":"TEXTO 1 PT",
+    "TEXTO2":"TEXTO 2 PT",
+    "IDIOMA":"SDAF"
+  },
+
+  "prueba2" : {
+    "es" : "Espanhol",
+    "en" : "Inglês",
+    "pt" : "Português"
+  }
+
+}

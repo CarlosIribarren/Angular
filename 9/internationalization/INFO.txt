@@ -1,0 +1,12 @@
+1.- Crear aplicacion:
+
+	ng new internationalization 
+
+2.- install @ngx-translate
+
+	npm install @ngx-translate/core @ngx-translate/http-loader --save
+
+con la opcion --save se actualiza package.json
+
+
+

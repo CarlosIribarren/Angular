@@ -1,0 +1,57 @@
+<div>
+
+  <h2>Idioma actual : {{translate.currentLang}}</h2>
+
+  <h2>{{ 'PRUEBA1.TEXTO1' | translate }}</h2>
+
+  <label>Cambio de idioma 1
+    <select #selectorDeIdioma (change)="translate.use(selectorDeIdioma.value)">
+      <option *ngFor="let idioma of translate.getLangs()" [value]="idioma">{{idioma}}</option>
+    </select>
+  </label>
+
+  <br>
+  <br>
+  <br>
+
+  <label> Cambio de idioma 2
+    <select #selectorDeIdioma2 (change)="translate.use(selectorDeIdioma2.value)">
+      <option value="es">{{ "prueba2.es" | translate }}</option>
+      <option value="en">{{ "prueba2.en" | translate }}</option>
+      <option value="pt">{{ "prueba2.pt" | translate }}</option>
+    </select>
+  </label>
+
+
+  <br>
+  <br>
+  <br>
+
+  <label> Cambio de idioma 3 (no selecciona el idioma en curso)
+    <select #selectorDeIdioma3 (change)="translate.use(selectorDeIdioma3.value)">
+      <option *ngFor="let idioma of translate.getLangs()" [value]="idioma" >
+        {{ 'prueba2.' + idioma | translate }}
+      </option>
+    </select>
+  </label>
+
+  <br>
+  <br>
+  <br>
+
+  <label> Cambio de idioma 4 (idioma en curso seleccionado)
+    <select #selectorDeIdioma4 (change)="translate.use(selectorDeIdioma4.value)">
+      <option *ngFor="let idioma of translate.getLangs()" [value]="idioma" [selected]="idioma === translate.currentLang" >
+            {{ 'prueba2.' + idioma | translate }}
+        </option>
+    </select>
+  </label>
+
+  <br>
+  <br>
+  <br>
+
+  <label>Ejemplo de obtener una traduccion en un momento concreto: </label>
+  <label>{{ejemploObtenerTraduccionDesdeComponente()}}</label>
+
+</div>

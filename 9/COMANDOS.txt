@@ -1,0 +1,15 @@
+****************************
+******* nuevo proyecto *****
+****************************
+
+ng new NOMBRE_PROYECTO
+
+****************************
+******* nuevo componente ***
+****************************
+
+ng generate component CARPETA/NOMBRE_COMPONENTE 
+ng g component CARPETA/NOMBRE_COMPONENTE 
+
+- Genera ficheros de componente
+- Modifica el fichero app.module.ts para hacer visible el componente
